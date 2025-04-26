@@ -14,7 +14,7 @@ const Dashboard = () => {
   ];
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="h-screen w-full flex flex-col bg-[#FAFAFA]">
           <Heading headingname="Dashboard" />
@@ -32,7 +32,9 @@ const Dashboard = () => {
                   key={item}
                   className="flex flex-col  justify-center bg-white rounded-lg shadow-md py-6 px-4 m-2 border-[#0000001A] border-[0.96px] "
                 >
-                  <span className="text-[#88FF55] font-500 text-3xl">{item.name}</span>
+                  <span className="text-[#88FF55] font-500 text-3xl">
+                    {item.name}
+                  </span>
                   <span className="font-bold text-3xl">{item.value}</span>
                 </div>
               ))}

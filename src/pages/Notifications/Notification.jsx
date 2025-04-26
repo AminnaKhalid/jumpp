@@ -7,7 +7,7 @@ const Notification = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="flex flex-col h-screen w-full">
           <Heading headingname={"Notifications"} />
@@ -23,11 +23,21 @@ const Notification = () => {
             {open && <NotificationModal onClose={() => setOpen(false)} />}
           </div>
           <div className="flex flex-col  items-center bg-white rounded-lg shadow-sm h-screen py-6 px-4 mx-6 my-4 border-[#0000001A] border-[0.96px] text-[#00000080] text-sm font-medium leading-5">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus totam voluptas, eligendi eos doloremque ut dolorum sint! Enim voluptatibus quam eum ea, dolorem consequuntur modi consequatur impedit illum quaerat tempore alias unde, velit quas officia ipsa, perferendis deleniti pariatur iure.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
+            totam voluptas, eligendi eos doloremque ut dolorum sint! Enim
+            voluptatibus quam eum ea, dolorem consequuntur modi consequatur
+            impedit illum quaerat tempore alias unde, velit quas officia ipsa,
+            perferendis deleniti pariatur iure.
             <br />
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quos porro, nostrum neque iste reprehenderit quae possimus, natus consequatur iusto eveniet nesciunt. Cum illum dignissimos inventore obcaecati reiciendis itaque modi.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
+            quos porro, nostrum neque iste reprehenderit quae possimus, natus
+            consequatur iusto eveniet nesciunt. Cum illum dignissimos inventore
+            obcaecati reiciendis itaque modi.
             <br />
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus nam ipsam quasi et sit exercitationem asperiores reiciendis corrupti nesciunt tempore! Culpa beatae ea esse sit ducimus ad distinctio repellat minus.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            Repellendus nam ipsam quasi et sit exercitationem asperiores
+            reiciendis corrupti nesciunt tempore! Culpa beatae ea esse sit
+            ducimus ad distinctio repellat minus.
           </div>
         </div>
       </div>

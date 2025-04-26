@@ -13,7 +13,7 @@ const Transaction = () => {
   ];
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col ">
         <Navbar />
         <div className="flex flex-col h-screen w-full bg-[#FAFAFA]">
           <Heading headingname={"Transaction"} />
@@ -23,11 +23,16 @@ const Transaction = () => {
               placeholder="Search..."
               className="py-2 px-3 border-[1px] border-[#E6E6E9] bg-[#FFFFFF] mr-2 rounded-md  md:w-1/4"
             />
-            <img src={filter} alt="" className="h-10 w-10 cursor-pointer" onClick={()=> SetOpen(true)} />
+            <img
+              src={filter}
+              alt=""
+              className="h-10 w-10 cursor-pointer"
+              onClick={() => SetOpen(true)}
+            />
           </div>
 
           {/* filter modal */}
-          {open && <TransactionModal  onClose={()=>SetOpen(false)}/> }
+          {open && <TransactionModal onClose={() => SetOpen(false)} />}
           <div className="flex flex-col bg-white rounded-lg shadow-sm h-screen py-6 px-4 mx-6 my-4 border-[#0000001A] border-[0.96px] text-[#00000080] text-sm font-medium leading-5">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {transdata.map((items, index) => (

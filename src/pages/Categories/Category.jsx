@@ -51,7 +51,7 @@ const Category = () => {
 
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="flex flex-col min-h-screen w-full bg-[#FAFAFA]">
           <Heading headingname={"Categories"} />

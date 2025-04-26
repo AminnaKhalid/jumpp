@@ -6,7 +6,7 @@ import AboutModal from './AboutModal'
 const Aboutus = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex flex-row">
+    <div className="flex md:flex-row flex-col">
       <Navbar />
       <div className="w-full h-screen bg-[#FAFAFA] flex flex-col">
         <Heading headingname="About Us" />
@@ -38,7 +38,6 @@ const Aboutus = () => {
           fugit ex iste nisi laboriosam nostrum recusandae, enim omnis quis
           consectetur veritatis! Dignissimos, quam?
           <br />
-        
         </div>
       </div>
     </div>

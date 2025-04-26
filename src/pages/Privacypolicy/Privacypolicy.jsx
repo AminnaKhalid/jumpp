@@ -7,7 +7,7 @@ const Privacypolicy = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="flex flex-col  w-full h-screen">
           <Heading headingname={"Privacy Policy"} />

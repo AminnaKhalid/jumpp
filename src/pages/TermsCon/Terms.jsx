@@ -7,7 +7,7 @@ const Terms = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="flex flex-col h-screen w-full">
           <Heading headingname={"Terms & Conditions"} />
@@ -35,10 +35,15 @@ const Terms = () => {
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. A numquam
             ipsa dicta adipisci enim ullam quidem id animi corrupti asperiores.
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequatur vero vitae officia maiores harum sapiente nihil rem debitis distinctio.
-            <br />Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum labore voluptatibus velit, ipsum error quis repudiandae. Accusamus temporibus nemo ad, eius maxime possimus adipisci ab unde quis. Eum, et velit?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur vero vitae officia maiores harum sapiente
+            nihil rem debitis distinctio.
+            <br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+            labore voluptatibus velit, ipsum error quis repudiandae. Accusamus
+            temporibus nemo ad, eius maxime possimus adipisci ab unde quis. Eum,
+            et velit?
           </div>
-          
         </div>
       </div>
     </>

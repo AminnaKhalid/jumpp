@@ -46,7 +46,7 @@ const Users = () => {
 
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="min-h-screen w-full flex flex-col bg-[#FAFAFA]">
           <Heading headingname={"All Users"} />

@@ -8,7 +8,7 @@ import download from "./assets/download.png";
 const Details = () => {
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex md:flex-row flex-col">
         <Navbar />
         <div className="flex flex-col w-full min-h-screen bg-[#FAFAFA]">
           <Heading headingname={"Contractor Details"} />
