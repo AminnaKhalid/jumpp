@@ -7,8 +7,8 @@ const Login = () => {
   return (
     <>
       <div className="grid md:grid-cols-2 grid-cols-1 h-screen">
-        <div className="bg-[#F5F5F5] flex justify-center items-center m-4 hidden md:flex">
-          <img src={side} alt="" className="w-full h-[95vh]" />
+        <div className=" justify-center items-center m-4 hidden md:flex">
+          <img src={side} alt="" className="w-full h-[95vh] " />
         </div>
         <div className="flex flex-col justify-center items-center md:px-16 px-4">
           <div className="flex items-center justify-center flex-col mb-8">
@@ -20,7 +20,7 @@ const Login = () => {
             </span>
           </div>
 
-          <form action="" className="flex flex-col space-y-4 md:w-2/3 w-full">
+          <form action="" className="flex flex-col space-y-4 md:w-4/5 w-full">
             <label htmlFor="name" className="text-sm font-medium">
               Email
             </label>

@@ -105,11 +105,9 @@ const TransactionDetail = () => {
               <img src={profile} alt="" className="w-20 h-20" />
               <div className="flex flex-col justify-center ml-4">
                 <span className="font-[400] text-[22px] ">Jerome Bell</span>
-                <span className="font-[500]  text-2xl">
-                  UI/UX Designer
-                  <span className="text-[#20212499] text-lg font-[400]">
-                    (12hours ago)
-                  </span>
+                <span className="font-[500]  text-2xl">UI/UX Designer</span>
+                <span className="text-[#20212499] text-lg font-[400]">
+                  (12hours ago)
                 </span>
               </div>
             </div>

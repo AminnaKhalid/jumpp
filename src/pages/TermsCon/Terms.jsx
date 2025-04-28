@@ -41,8 +41,7 @@ const Terms = () => {
             <br />
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
             labore voluptatibus velit, ipsum error quis repudiandae. Accusamus
-            temporibus nemo ad, eius maxime possimus adipisci ab unde quis. Eum,
-            et velit?
+          
           </div>
         </div>
       </div>

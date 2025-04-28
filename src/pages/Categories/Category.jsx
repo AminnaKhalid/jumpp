@@ -104,10 +104,10 @@ const Category = () => {
                 {openDropdown === item.id && (
                   <div
                     ref={dropdownRef}
-                    className="absolute right-2 top-12 bg-white shadow-lg rounded-md z-10 w-32"
+                    className="absolute right-14 top-13 bg-white shadow-lg rounded-md z-10 w-32"
                   >
                     <div
-                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b-1 border-gray-200"
                       onClick={() => handleEdit(item.id)}
                     >
                       Edit

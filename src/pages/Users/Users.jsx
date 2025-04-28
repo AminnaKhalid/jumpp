@@ -52,7 +52,7 @@ const Users = () => {
           <Heading headingname={"All Users"} />
 
           {/* Toggle buttons and search bar */}
-          <div className="flex lg:justify-between items-center justify-center flex-col md:flex-row lg:flex-row lg:m-4">
+          <div className="flex lg:justify-between items-center flex-col m-4 md:flex-row">
             <div className="flex items-center justify-center space-x-1 lg:space-x-3 my-3 md:my-0">
               {buttondata.map((item) => (
                 <div
@@ -64,17 +64,23 @@ const Users = () => {
                   }`}
                   onClick={() => setActiveTab(item.value)}
                 >
-                  <img src={item.icon} alt="" className="w-3.5 h-3.5 mr-2 hidden lg:block" />
-                  <span className="font-medium text-xs lg:text-sm text-center">{item.name}</span>
+                  <img
+                    src={item.icon}
+                    alt=""
+                    className="w-3.5 h-3.5 mr-2 hidden lg:block"
+                  />
+                  <span className="font-medium text-xs lg:text-sm text-center">
+                    {item.name}
+                  </span>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-end m-4">
+            <div className="flex justify-end m-4 w-full md:w-1/2">
               <input
                 type="text"
                 placeholder="Search..."
-                className="py-2 px-3 border-[1px] border-[#E6E6E9] bg-[#FFFFFF] mr-2 rounded-md"
+                className="py-2 px-3 border-[1px] border-[#E6E6E9] bg-[#FFFFFF] mr-2 rounded-md md:w-[60%] w-full"
               />
               <img src={filter} alt="" className="h-10 w-10 cursor-pointer" />
             </div>

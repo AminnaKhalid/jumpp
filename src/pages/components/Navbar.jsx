@@ -44,7 +44,7 @@ const Navbar = () => {
       path: "/users",
     },
     {
-      name: "Contractors",
+      name: "All Contractors",
       icon: contractoricon,
       hovericon: hovercontractor,
       path: "/contractors",
@@ -90,7 +90,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Mobile hamburger menu button - visible on white background */}
+      {/* Mobile hamburger menu button */}
       <div className="md:hidden fixed top-4 left-4 z-50 bg-white p-1 rounded-md">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -113,14 +113,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Spacer to prevent content from being hidden behind hamburger */}
+      {/* Spacer */}
       <div className="md:hidden h-16"></div>
 
-      {/* desktop sidebar - unchanged */}
+      {/* Desktop Sidebar */}
       <div className="w-80 min-h-screen bg-[#000000] px-4 pt-10 justify-between flex-col hidden md:flex">
         <div className="flex flex-col justify-center items-center">
           <img src={logo} alt="" className="w-[149px] h-[60px]" />
-          {/* navbaritems */}
           <div className="flex flex-col pt-4 w-full">
             {navItems.map((item) => (
               <Link
@@ -153,16 +152,17 @@ const Navbar = () => {
         {/* logout */}
         <Link
           className="px-4 py-4 flex items-center space-x-4"
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setOpen(true);
+            setMobileMenuOpen(false);
+          }}
         >
           <img src={logout} alt="" className="w-5 h-5" />
           <span className="text-white px-3 font-medium text-lg">Logout</span>
         </Link>
-
-        {open && <DeleteLogoutModal onClose={() => setOpen(false)} />}
       </div>
 
-      {/* Mobile sidebar */}
+      {/* Mobile Sidebar */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40">
           <div
@@ -229,6 +229,9 @@ const Navbar = () => {
           </div>
         </div>
       )}
+
+      {/* Modal outside sidebar, so it works on both screens */}
+      {open && <DeleteLogoutModal onClose={() => setOpen(false)} />}
     </>
   );
 };

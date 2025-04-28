@@ -24,7 +24,9 @@ const Details = () => {
                   />
                   <div className="flex flex-col ml-4 font-medium text-sm">
                     <span>Clelsea Gregry</span>
-                    <span className="text-xs md:text-sm">clelsea.gregry@email.com</span>
+                    <span className="text-xs md:text-sm">
+                      clelsea.gregry@email.com
+                    </span>
                   </div>
                 </div>
 
@@ -52,30 +54,10 @@ const Details = () => {
                       <span className="text-lg font-[400] text-[#8A8A8F]">
                         Front Side
                       </span>
-                      <img src={id} alt="" className="h-[140px] w-full mt-3" />
-                    </div>
-                    <div className="mt-4">
-                      <span className="text-lg font-[400] text-[#8A8A8F]">
-                        Back Side
-                      </span>
-                      <img src={id} alt="" className="h-[140px] w-full mt-3" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-4">
-                  <span className="font-medium text-2xl">
-                    Government ID optional
-                  </span>
-                  <div className="grid md:grid-cols-2 grid-cols-1 gap-6 ">
-                    <div className="mt-4">
-                      <span className="text-lg font-[400] text-[#8A8A8F] mb-2">
-                        Front Side
-                      </span>
                       <img
                         src={id}
                         alt=""
-                        className="h-[140px] w-full rounded-2xl mt-3"
+                        className="h-[140px] w-[90%] rounded-2xl  mt-3"
                       />
                     </div>
                     <div className="mt-4">
@@ -85,7 +67,35 @@ const Details = () => {
                       <img
                         src={id}
                         alt=""
-                        className="h-[140px] w-full rounded-2xl mt-3"
+                        className="h-[140px] w-[90%] rounded-2xl  mt-3"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  <span className="font-medium text-2xl">
+                    Government ID optional
+                  </span>
+                  <div className="grid md:grid-cols-2 grid-cols-1 gap-2 ">
+                    <div className="mt-4">
+                      <span className="text-lg font-[400] text-[#8A8A8F] mb-2">
+                        Front Side
+                      </span>
+                      <img
+                        src={id}
+                        alt=""
+                        className="h-[140px] w-[90%] rounded-2xl mt-3 "
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <span className="text-lg font-[400] text-[#8A8A8F]">
+                        Back Side
+                      </span>
+                      <img
+                        src={id}
+                        alt=""
+                        className="h-[140px] w-[90%] rounded-2xl mt-3 object-cover"
                       />
                     </div>
                   </div>
@@ -109,7 +119,9 @@ const Details = () => {
                     <span className="font-[400] text-sm">Download</span>
                   </div>
                 </div>
-                <span className="text-xl font-medium py-3">Copy of Diploma</span>
+                <span className="text-xl font-medium py-3">
+                  Copy of Diploma
+                </span>
                 <div className="rounded-md flex flex-col border-2 border-[#B0B7C324] w-full md:w-2/3">
                   <div className="flex py-6 px-2 ">
                     <img src={cv} alt="" className="h-9 w-9" />

@@ -40,22 +40,22 @@ const Transaction = () => {
                   className="rounded-2xl border-[#F7F8F8] bg-[#FFFFFF] border-3 "
                   key={index}
                 >
-                  <div className="flex justify-between py-5 px-4">
-                    <div className="mt-2 space-y-2">
-                      <div>
+                  <div className="flex justify-between py-5 px-4 flex-col-reverse xl:flex-row">
+                    <div className="mt-2 space-y-2 flex flex-col ">
+                      <div className='flex'>
                         <span className="mr-2">Job Title :</span>
                         <span className="text-black">{items.title}</span>
                       </div>
-                      <div className="">
+                      <div className="flex">
                         <span className="mr-2">Duration:</span>
                         <span className="text-black">{items.duration}</span>
                       </div>
-                      <div className="">
+                      <div className="flex">
                         <span className="mr-2">Total Amount:</span>
                         <span className="text-black">{items.amount}</span>
                       </div>
                     </div>
-                    <img src={date} alt="" className="h-10 w-25" />
+                    <img src={date} alt="" className="h-10 w-auto object-cover" />
                   </div>
 
                   {/* button below the data */}
