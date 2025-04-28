@@ -60,7 +60,7 @@ const ActiveUser = () => {
   return (
     <div className="relative overflow-x-auto">
       {/* Table Container */}
-      <div className="min-w-[600px]">
+      <div className="min-w-[600px] md:min-w-auto">
         <div className="grid grid-cols-12 md:grid-cols-9 bg-white mb-8 text-center border border-[#0000001A] font-[600]  text-[10px] text-[#8C8E9C]">
           <div className="border border-[#0000001A] p-2 col-span-2">
             User Details
@@ -105,8 +105,8 @@ const ActiveUser = () => {
                 <img src={items.status} alt="" className="h-10 w-14" />
               </div>
               <div className="border-r-1 border-b-1 border-gray-200 p-2 col-span-2 md:col-span-1 flex items-center justify-center space-x-2">
-                <img src={deletee} alt="" className="w-8 h-8" />
-                <img src={star} alt="" className="w-8 h-8" />
+                <img src={deletee} alt="" className="lg:w-8 lg:h-8 w-5 h-5" />
+                <img src={star} alt="" className="lg:w-8 lg:h-8 w-5 h-5" />
               </div>
             </div>
           ))}

@@ -52,7 +52,7 @@ const Contractor = () => {
           <Heading headingname={"All Users"} />
 
           {/* Toggle buttons and search bar */}
-          <div className="flex justify-between items-center flex-col md:flex-row m-4">
+          <div className="flex lg:justify-between items-center flex-col m-4 md:flex-row">
             <div className="flex items-center justify-center space-x-3">
               {buttondata.map((item) => (
                 <div
@@ -64,8 +64,8 @@ const Contractor = () => {
                   }`}
                   onClick={() => setActiveTab(item.value)}
                 >
-                  <img src={item.icon} alt="" className="w-3.5 h-3.5 mr-2" />
-                  <span className="font-medium text-sm">{item.name}</span>
+                  <img src={item.icon} alt="" className="w-3.5 h-3.5 mr-2 hidden lg:block" />
+                  <span className="font-medium md:text-xs text-center lg:text-sm text-xs">{item.name}</span>
                 </div>
               ))}
             </div>
@@ -74,7 +74,7 @@ const Contractor = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="py-2 px-3 border-[1px] border-[#E6E6E9] bg-[#FFFFFF] mr-2 rounded-md"
+                className="py-2 px-3 border-[1px] border-[#E6E6E9] bg-[#FFFFFF] mr-2 rounded-md w-[50%]"
               />
               <img src={filter} alt="" className="h-10 w-10 cursor-pointer" />
             </div>

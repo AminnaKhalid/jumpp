@@ -48,12 +48,12 @@ const Users = () => {
     <>
       <div className="flex md:flex-row flex-col">
         <Navbar />
-        <div className="min-h-screen w-full flex flex-col bg-[#FAFAFA]">
+        <div className="flex flex-col min-h-screen w-full  bg-[#FAFAFA]">
           <Heading headingname={"All Users"} />
 
           {/* Toggle buttons and search bar */}
-          <div className="flex justify-between items-center flex-col md:flex-row m-4">
-            <div className="flex items-center justify-center space-x-3">
+          <div className="flex lg:justify-between items-center justify-center flex-col md:flex-row lg:flex-row lg:m-4">
+            <div className="flex items-center justify-center space-x-1 lg:space-x-3 my-3 md:my-0">
               {buttondata.map((item) => (
                 <div
                   key={item.value}
@@ -64,8 +64,8 @@ const Users = () => {
                   }`}
                   onClick={() => setActiveTab(item.value)}
                 >
-                  <img src={item.icon} alt="" className="w-3.5 h-3.5 mr-2" />
-                  <span className="font-medium text-sm">{item.name}</span>
+                  <img src={item.icon} alt="" className="w-3.5 h-3.5 mr-2 hidden lg:block" />
+                  <span className="font-medium text-xs lg:text-sm text-center">{item.name}</span>
                 </div>
               ))}
             </div>

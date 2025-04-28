@@ -44,7 +44,7 @@ const Navbar = () => {
       path: "/users",
     },
     {
-      name: "All Contractors",
+      name: "Contractors",
       icon: contractoricon,
       hovericon: hovercontractor,
       path: "/contractors",
@@ -139,7 +139,7 @@ const Navbar = () => {
                   className="w-5 h-5"
                 />
                 <span
-                  className={`px-3 font-medium text-lg ${
+                  className={`px-3 font-medium md:sm lg:text-lg ${
                     currentPath === item.path ? "text-[black]" : "text-white"
                   }`}
                 >

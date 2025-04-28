@@ -10,8 +10,8 @@ const CategoryModal = ({onClose}) => {
             <h2 className="text-lg font-semibold text-center mb-4 ">
               Add Category
             </h2>
-            <div className="w-80 h-52 border-[1px] border-[#E6E7E9] rounded-lg flex items-center justify-center">
-              <img src={catplus} alt="" className="h-14 w-14" />
+            <div className="w-70 h-40 md:w-80 md:h-52 border-[1px] border-[#E6E7E9] rounded-lg flex items-center justify-center">
+              <img src={catplus} alt="" className="h-10 w-10 md:h-14 md:w-14" />
               {/* form */}
             </div>
           </div>

@@ -57,11 +57,17 @@ const Category = () => {
           <Heading headingname={"Categories"} />
           <div className="flex justify-end m-4 flex-col md:flex-row space-y-3 md:space-y-0">
             <button
-              className="bg-[#88FF55] text-black rounded-lg px-4 py-2 mx-4 flex flex-row items-center text-[16px] font-medium cursor-pointer"
+              className="bg-[#88FF55] text-black rounded-lg px-4 py-2 mx-4 flex flex-row items-center cursor-pointer"
               onClick={() => setOpen(true)}
             >
-              <img src={add} alt="add" className="w-5 h-5 mr-2" />
-              Add Categories
+              <img
+                src={add}
+                alt="add"
+                className="w-5 h-5 mr-2 "
+              />
+              <div className="lg:text-lg md:text-xs text-xs font-medium ">
+                Add Categories
+              </div>
             </button>
             <div className="flex  items-center justify-center">
               <input
@@ -77,7 +83,7 @@ const Category = () => {
           </div>
 
           {/* for cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 mx-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mx-4">
             {category.map((item) => (
               <div
                 key={item.id}
