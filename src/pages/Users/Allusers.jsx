@@ -104,7 +104,7 @@ const Allusers = () => {
         <div className="bg-white">
           {data.map((items, index) => (
             <div
-              className="grid grid-cols-12 md:grid-cols-9 text-center font-[600] text-[10px] md:text-[12px] text-black"
+              className="grid grid-cols-12 md:grid-cols-9 text-center font-[600] text-[8px] md:text-[12px] text-black"
               key={index}
             >
               <div className="border-r-1 border-b-1 border-gray-200 p-2 col-span-2 flex items-center justify-center">

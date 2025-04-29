@@ -111,7 +111,7 @@ const ActiveUser = () => {
           {users.map((item, index) => (
             <div
               key={index}
-              className="grid grid-cols-12 md:grid-cols-9 text-center font-[600] text-[10px] md:text-[12px] text-black"
+              className="grid grid-cols-12 md:grid-cols-9 text-center font-[600] text-[8px] md:text-[12px] text-black"
             >
               <div className="border-b border-r  border-gray-200 p-2 col-span-2 flex items-center justify-center">
                 <img src={profile} alt="Profile" className="w-8 h-8 mr-3" />
@@ -123,7 +123,7 @@ const ActiveUser = () => {
               <div className="border-b border-r border-gray-200 p-2 md:col-span-1 col-span-2 flex items-center justify-center">
                 {item.number}
               </div>
-              <div className="border-b border-r border-gray-200 p-2 col-span-2 flex items-center justify-center">
+              <div className="border-b border-r border-gray-200 p-2 col-span-2 flex items-center justify-center ">
                 {item.address}
               </div>
 
