@@ -6,6 +6,7 @@ import add from "../components/assets/addicon.png";
 import icon from "./assets/caticon.png";
 import image from "./assets/catimage.png";
 import CategoryModal from "./CategoryModal";
+
 const Category = () => {
   const [open, setOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -60,16 +61,12 @@ const Category = () => {
               className="bg-[#88FF55] text-black rounded-lg px-4 py-2 mx-4 flex flex-row items-center cursor-pointer"
               onClick={() => setOpen(true)}
             >
-              <img
-                src={add}
-                alt="add"
-                className="w-5 h-5 mr-2 "
-              />
-              <div className="lg:text-lg md:text-xs text-xs font-medium ">
+              <img src={add} alt="add" className="w-5 h-5 mr-2" />
+              <div className="lg:text-lg md:text-xs text-xs font-medium">
                 Add Categories
               </div>
             </button>
-            <div className="flex  items-center justify-center">
+            <div className="flex items-center justify-center">
               <input
                 type="text"
                 placeholder="Search..."
@@ -87,16 +84,19 @@ const Category = () => {
             {category.map((item) => (
               <div
                 key={item.id}
-                className="bg-[#F0F1F6] rounded-2xl flex flex-col justify-center items-center pt-4 relative"
+                className="bg-[#F0F1F6] rounded-2xl flex flex-col justify-center items-center  relative p-3"
               >
-                <div className="relative px-3">
-                  <img
-                    src={item.icon}
-                    alt="options"
-                    className="absolute h-7 w-7 right-4 top-3 cursor-pointer"
-                    onClick={(e) => toggleDropdown(item.id, e)}
-                  />
-                  <img src={item.image} alt="" className="w-44 h-32" />
+                <div className="relative w-full flex justify-center items-start">
+                  {/* fixed dropdown icon */}
+                  <div className="absolute top-2 right-2">
+                    <img
+                      src={item.icon}
+                      alt="options"
+                      className="h-7 w-7 cursor-pointer z-20"
+                      onClick={(e) => toggleDropdown(item.id, e)}
+                    />
+                  </div>
+                  <img src={item.image} alt="" className="" />
                 </div>
                 <span className="font-medium text-lg py-2">{item.namecat}</span>
 
@@ -104,10 +104,10 @@ const Category = () => {
                 {openDropdown === item.id && (
                   <div
                     ref={dropdownRef}
-                    className="absolute right-14 top-13 bg-white shadow-lg rounded-md z-10 w-32"
+                    className="absolute top-11 right-9 bg-white shadow-md rounded-md z-30 w-32"
                   >
                     <div
-                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b-1 border-gray-200"
+                      className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-b border-gray-200"
                       onClick={() => handleEdit(item.id)}
                     >
                       Edit

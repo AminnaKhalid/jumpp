@@ -47,7 +47,8 @@ const Navbar = () => {
       name: "All Contractors",
       icon: contractoricon,
       hovericon: hovercontractor,
-      path: "/contractors",
+      path: "/Contractors",
+      matchPaths: ["/Contractors"], // This will match /contractors and all sub-routes
     },
     {
       name: "Categories",
@@ -55,7 +56,12 @@ const Navbar = () => {
       hovericon: hovercategories,
       path: "/category",
     },
-    { name: "Reviews", icon: reviews, hovericon: hoverreview, path: "/review" },
+    {
+      name: "Reviews",
+      icon: reviews,
+      hovericon: hoverreview,
+      path: "/review",
+    },
     {
       name: "Transactions",
       icon: transaction,
@@ -87,6 +93,19 @@ const Navbar = () => {
       path: "/terms",
     },
   ];
+
+  // Function to check if a nav item is active
+  const isActive = (item) => {
+    // If it's the exact path
+    if (currentPath === item.path) return true;
+
+    // If it has matchPaths and current path starts with any of them
+    if (item.matchPaths) {
+      return item.matchPaths.some((path) => currentPath.startsWith(path));
+    }
+
+    return false;
+  };
 
   return (
     <>
@@ -126,20 +145,20 @@ const Navbar = () => {
                 to={item.path}
                 key={item.name}
                 className={`px-2 py-3 flex items-center space-x-4 rounded-md relative ${
-                  currentPath === item.path ? "bg-[#88FF55]" : "bg-[Black]"
+                  isActive(item) ? "bg-[#88FF55]" : "bg-[Black]"
                 }`}
               >
-                {currentPath === item.path && (
+                {isActive(item) && (
                   <div className="absolute -left-3 h-12 w-[4px] bg-[#88FF55] rounded-r-sm"></div>
                 )}
                 <img
-                  src={currentPath === item.path ? item.hovericon : item.icon}
+                  src={isActive(item) ? item.hovericon : item.icon}
                   alt=""
                   className="w-5 h-5"
                 />
                 <span
                   className={`px-3 font-medium md:sm lg:text-lg ${
-                    currentPath === item.path ? "text-[black]" : "text-white"
+                    isActive(item) ? "text-[black]" : "text-white"
                   }`}
                 >
                   {item.name}
@@ -182,26 +201,20 @@ const Navbar = () => {
                       key={item.name}
                       onClick={() => setMobileMenuOpen(false)}
                       className={`px-2 py-3 flex items-center space-x-4 rounded-md relative ${
-                        currentPath === item.path
-                          ? "bg-[#88FF55]"
-                          : "bg-[Black]"
+                        isActive(item) ? "bg-[#88FF55]" : "bg-[Black]"
                       }`}
                     >
-                      {currentPath === item.path && (
+                      {isActive(item) && (
                         <div className="absolute -left-3 h-12 w-[4px] bg-[#88FF55] rounded-r-sm"></div>
                       )}
                       <img
-                        src={
-                          currentPath === item.path ? item.hovericon : item.icon
-                        }
+                        src={isActive(item) ? item.hovericon : item.icon}
                         alt=""
                         className="w-5 h-5"
                       />
                       <span
                         className={`px-3 font-medium text-lg ${
-                          currentPath === item.path
-                            ? "text-[black]"
-                            : "text-white"
+                          isActive(item) ? "text-[black]" : "text-white"
                         }`}
                       >
                         {item.name}

@@ -5,6 +5,7 @@ import profile from "../Transaction/assets/profile.png";
 import id from "./assets/idcard.png";
 import cv from "./assets/cv.png";
 import download from "./assets/download.png";
+
 const Details = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const Details = () => {
                   <img
                     src={profile}
                     alt=""
-                    className="h-20 w-20 rounded-full"
+                    className="h-20 w-20 rounded-full object-cover"
                   />
                   <div className="flex flex-col ml-4 font-medium text-sm">
                     <span>Clelsea Gregry</span>
@@ -57,7 +58,7 @@ const Details = () => {
                       <img
                         src={id}
                         alt=""
-                        className="h-[140px] w-[90%] rounded-2xl  mt-3"
+                        className="md:h-[160px] h-[140px] w-full max-w-[300px] rounded-2xl mt-3 mx-auto"
                       />
                     </div>
                     <div className="mt-4">
@@ -67,7 +68,7 @@ const Details = () => {
                       <img
                         src={id}
                         alt=""
-                        className="h-[140px] w-[90%] rounded-2xl  mt-3"
+                        className="md:h-[160px] h-[140px] w-full max-w-[300px] rounded-2xl mt-3 mx-auto"
                       />
                     </div>
                   </div>
@@ -85,7 +86,7 @@ const Details = () => {
                       <img
                         src={id}
                         alt=""
-                        className="h-[140px] w-[90%] rounded-2xl mt-3 "
+                        className="md:h-[160px] w-full h-[140px] max-w-[300px] rounded-2xl mt-3 mx-auto"
                       />
                     </div>
                     <div className="mt-4">
@@ -95,7 +96,7 @@ const Details = () => {
                       <img
                         src={id}
                         alt=""
-                        className="h-[140px] w-[90%] rounded-2xl mt-3 object-cover"
+                        className="md:h-[160px] h-[140px] w-full max-w-[300px] rounded-2xl mt-3 mx-auto"
                       />
                     </div>
                   </div>
@@ -105,7 +106,7 @@ const Details = () => {
                 <span className="text-xl font-medium py-3">Resume</span>
                 <div className="rounded-md flex flex-col border-2 border-[#B0B7C324] w-full md:w-2/3">
                   <div className="flex py-6 px-2 ">
-                    <img src={cv} alt="" className="h-9 w-9" />
+                    <img src={cv} alt="" className="h-9 w-9 " />
                     <div className="flex flex-col ml-4 ">
                       <span className="font-medium text-lg">CPR Card</span>
                       <span className="text-xs font-[400] text-[#8C959A]">
@@ -115,7 +116,7 @@ const Details = () => {
                   </div>
 
                   <div className="flex justify-center items-center py-2 bg-[#F7F8F8]">
-                    <img src={download} alt="" className="w-8 h-8 mr-3" />
+                    <img src={download} alt="" className="w-8 h-8 mr-3 " />
                     <span className="font-[400] text-sm">Download</span>
                   </div>
                 </div>
