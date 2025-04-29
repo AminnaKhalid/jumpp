@@ -48,7 +48,7 @@ const Navbar = () => {
       icon: contractoricon,
       hovericon: hovercontractor,
       path: "/Contractors",
-      matchPaths: ["/Contractors"], // This will match /contractors and all sub-routes
+      matchPaths: ["/Contractors"],
     },
     {
       name: "Categories",
@@ -67,6 +67,7 @@ const Navbar = () => {
       icon: transaction,
       hovericon: hovertransaction,
       path: "/transaction",
+      matchPaths: ["/transaction"],
     },
     {
       name: "Notification",
