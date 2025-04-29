@@ -27,14 +27,14 @@ const CategoryModal = ({onClose}) => {
           <div className="flex justify-center items-center py-2 mx-6">
             <button
               type="button"
-              className="bg-[#FFFFFF] text-black rounded-lg px-4 py-3 mt-4 mr-2 border-[1px] border-[#E6E7E9] inset-shadow-sm w-30 md:w-full font-medium text-lg cursor-pointer"
+              className="bg-[#FFFFFF] text-black rounded-lg px-4 py-3 mt-4 mr-2 border-[1px] border-[#E6E7E9] inset-shadow-sm w-full font-medium text-lg cursor-pointer"
               onClick={onClose}
             >
               Cancel
             </button>
             <button
               onClick={onClose}
-              className=" text-black rounded-lg px-4 py-3 mt-4 inset-shadow-sm w-30 md:w-full bg-[#88FF55] text-lg font-medium cursor-pointer "
+              className=" text-black rounded-lg px-4 py-3 mt-4 inset-shadow-sm w-full bg-[#88FF55] text-lg font-medium cursor-pointer "
             >
               Add
             </button>
